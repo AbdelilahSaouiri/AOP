@@ -35,3 +35,24 @@ Ce sont des fonctionnalités qui traversent plusieurs modules du système (loggi
 ## 🧩 Syntaxe de base d’un pointcut
 
 modificateur-retour nom.package.Classe.méthode(paramètres)
+
+
+
+
+## les proxies JDK et CGLIB est clé pour bien maîtriser Spring AOP, car ce sont les mécanismes utilisés pour appliquer les aspects au moment de l’exécution.
+```
+1. Proxy JDK
+   Fonctionne uniquement si le bean implémente une interface.
+
+Spring crée un objet proxy qui implémente la même interface.
+
+Le proxy délègue l’appel à l’objet réel + exécute les aspects.
+```
+```
+2. CGLIB Proxy
+   Utilisé si le bean n’implémente pas d’interface.
+
+Spring crée un sous-classe dynamique de ta classe cible.
+
+Le proxy hérite de ta classe et surcharge les méthodes.
+```
