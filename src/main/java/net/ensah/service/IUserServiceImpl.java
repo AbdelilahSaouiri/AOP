@@ -19,4 +19,9 @@ public class IUserServiceImpl implements IUserService {
     public void delete(String name) {
      users.remove(name);
     }
+
+    @Override
+    public List<String> getAll() {
+        return users;
+    }
 }
