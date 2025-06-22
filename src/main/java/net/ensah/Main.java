@@ -8,17 +8,17 @@ import org.springframework.context.annotation.ComponentScan;
 
 @ComponentScan(value = {"net.ensah.config","net.ensah.service","net.ensah.springAspect"})
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         ApplicationContext context = new AnnotationConfigApplicationContext(Main.class);
-        var service=context.getBean(IUserServiceImp2.class);
+        var service=context.getBean(IUserService.class);
         service.add("abdelilah");
-       // service.add("saouiri");
+        service.add("saouiri");
       //  service.add("med");
         //service.add("sa");
-        System.out.println(service.getClass().getName());
-       // service.delete("saouiri");
-      //  service.getAll().forEach(System.out::println);
+       // System.out.println(service.getClass().getName());
+        service.delete("saouiri");
+       service.getAll().forEach(System.out::println);
 
     }
 }
