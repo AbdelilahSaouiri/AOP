@@ -6,7 +6,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.ComponentScan;
 
 
-@ComponentScan(gi})
+@ComponentScan(value = {"net.ensah.config","net.ensah.service","net.ensah.springAspect"})
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
