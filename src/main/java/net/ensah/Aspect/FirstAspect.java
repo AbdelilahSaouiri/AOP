@@ -3,8 +3,6 @@ package net.ensah.Aspect;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 
-import java.util.Arrays;
-
 @Aspect
 public class FirstAspect {
 
